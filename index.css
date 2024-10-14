@@ -1,0 +1,645 @@
+/* 
+Palate in Use:
+d8f3dc
+b7e4c7
+95d5b2
+74c69d
+52b788
+40916c
+2d6a4f
+1b4332
+081c15 
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    background-image: none;
+    padding-top: 75px;
+}
+
+/* Dashboard container */
+.dashboard {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Title Section */
+.title-section {
+    text-align: center;
+    padding: 40px 20px;
+    color: #1b4332;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    background: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.title-section h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #1b4332;
+    background: linear-gradient(90deg, #74c69d, #40916c, #1b4332);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shinyEffect 3s ease-in-out infinite;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Shiny effect */
+@keyframes shinyEffect {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Information Section - What we do, How to use */
+.info-section {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px; /* Rounded edges for the boxes */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.info-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info-section ol {
+    margin-left: 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Input Section */
+.input-section {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px; /* Rounded edges */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.input-section label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-section input[type="file"],
+.input-section input[type="text"],
+.input-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded input fields */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.input-section input[type="file"]:focus,
+.input-section input[type="text"]:focus,
+.input-section textarea:focus {
+    border-color: #74c69d;
+    outline: none;
+}
+
+.input-section button {
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0px; /* Keep Predict Sequence button square */
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.input-section button:hover {
+    background-color: #40916c;
+}
+
+/* Output Section */
+.output-section {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 16px; /* Rounded edges */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.output-section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Image Section */
+.image-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.output-image {
+    max-width: 100%;
+    height: 350px;
+    width: 350px;
+    border-radius: 12px; /* Rounded image corners */
+    transition: transform 0.3s;
+}
+
+.output-image:hover {
+    transform: scale(1.05);
+}
+
+#output-area {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners for output area */
+    min-height: 50px;
+    font-family: monospace;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* Footer Section */
+.footer {
+    background-color: rgb(1, 50, 1);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    border-radius: 0px; /* Keep footer straight edges */
+}
+
+.redTxt {
+    color: rgb(171, 25, 25);
+    font-weight: 550;
+}
+
+.greenTxt {
+    color: rgb(20, 107, 20);
+    font-weight: 550;
+}
+.blueTxt {
+    color: rgb(31, 57, 150);
+    font-weight: 550;
+}
+
+/* navigation bar */
+.navbar {
+    background-color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    padding: 20px;
+    height: 80px; 
+    border-radius: 0px; /* Keeping the navbar straight at the top */
+}
+
+.navbar .navbar-brand {
+    font-size: 1.8rem; /* Slightly larger title */
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 12px; /* Rounded navbar buttons */
+    box-shadow: none;
+    font-size: 1rem;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgb(171, 223, 165); /* Hover effect */
+    color: black;
+}
+
+.navbar-collapse {
+    background-color: #000000; 
+}
+
+/* About Us Section */
+#about-us .name {
+    font-weight: bold;
+}
+
+#about-us .university {
+    color: #007bff;
+}
+
+.copy-btn {
+    background-color: #f8f9fa;  
+    color: #6c757d; 
+    border-color: #0088ff; 
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.copy-btn:hover {
+    background-color: #28a745;  
+    color: white; 
+    border-color: #28a745; 
+}
+
+/* Copied text styling */
+.copied-text {
+    color: #28a745; /* Green color */
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: -20px; /* Moves the copied text below the email */
+    left: 0; /* Aligned to start below the email button */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%; /* Ensures it stays under the email */
+    text-align: center; 
+}
+
+/* Typewriter Effect */
+.typewriter-container {
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    overflow: hidden;
+    border-right: 0.15em solid #000;
+    white-space: normal;
+    word-break: break-all;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 0.05em;
+    animation: blink-caret 0.75s step-end infinite;
+    max-width: 90%;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+/* Non-blinking after typing */
+.typewriter-container.done-typing {
+    border-right: none;
+}
+
+/* Dark Mode with Profluent Bio-inspired Palette */
+body.dark-mode {
+    background-color: black; /* Deep dark green background */
+    color: white; /* Soft neon green text */
+    background-image: none;
+}
+
+.navbar.dark-mode {
+    background-color: black; /* Slightly lighter dark green for navbar */
+    border-bottom: 2px dotted #39745f;
+}
+
+.info-section.dark-mode, .input-section.dark-mode, .output-section.dark-mode {
+    background-color: #081c15; /* Dark green background for sections */
+    border: 2px dotted #52b788;
+}
+
+.footer.dark-mode {
+    background-color: #052f20; /* Dark green for footer */
+    color: white;
+    border-top: 2px dotted #52b788;
+}
+
+.copy-btn.dark-mode {
+    background-color: rgb(217, 228, 213); /* Dark green for buttons */
+    color: black; /* Neon green text for buttons */
+    border-color: #52b788; /* Neon green border */
+}
+
+.copy-btn.dark-mode:hover {
+    background-color: #18ad67; /* Lighter green on hover */
+    color: #0a3526; /* Dark text for contrast */
+}
+
+.copied-text.dark-mode {
+    color: #a8ff8e; /* Neon green text for the copied message */
+}
+
+.navbar-nav .nav-link.dark-mode {
+    color: white;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link.dark-mode.active {
+    color: black; /* Black text for the active (clicked) navigation item */
+}
+
+.navbar-nav .nav-link.dark-mode:hover {
+    background-color: #39745f; 
+    color: black; 
+}
+
+.navbar.dark-mode .navbar-brand {
+    font-size: 1.8rem; /* Larger title in dark mode as well */
+    color: #aff59a; /* Neon green for the title in dark mode */
+}
+
+.typewriter-container.dark-mode {
+    color: white; 
+    border-right: 0.15em solid white;
+    border: 2px dotted #52b788;
+}
+
+.input-box.dark-mode {
+    background-color: rgb(154, 182, 144);
+    color: black;
+}
+
+.enzymeImg {
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    max-width: 100%;
+}
+
+/* Widen the sections */
+.input-section, .info-section, .output-section {
+    max-width: 95%; /* Make it wider horizontally */
+    margin: 0 auto;
+    margin-top: 40px;
+
+}
+
+/* General container for each section */
+
+/* General container for each section */
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensure both elements stretch to the same height */
+    padding: 40px 0;
+}
+
+/* Box styling for text with dotted border */
+.info-box {
+    width: 48%;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensure text is vertically centered */
+}
+
+/* Bigger title fonts */
+.info-box h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Image styles */
+.info-image {
+    width: 40%; /* Adjust this to make images smaller */
+    height: auto;
+    border-radius: 15px;
+    object-fit: contain; /* Maintain aspect ratio while fitting */
+    margin: 0 20px; /* Add some space between image and text */
+}
+
+body.dark-mode .info-box {
+    background-color: #081c15; /* Match footer's dark green */
+    color: white; /* White text color for dark mode */
+    border: 2px dotted #52b788; /* Retain dotted border */
+}
+
+/* For small screens, stack elements vertically */
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-box, .info-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* About Us Section Styling */
+.about-us-section {
+    text-align: center;
+}
+
+.profile-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    justify-content: center; /* Centers the profiles on the page */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.profile {
+    flex-basis: 23%; /* Each profile takes about 23% of the container's width on larger screens */
+    text-align: center;
+    padding: 20px;
+    border: 2px dotted #52b788; /* Green dotted border */
+    border-radius: 16px;
+    background-color: #081c15; /* Updated dark color */
+    color: white; /* Ensures white text color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.profile img {
+    width: 150px; /* Set profile image width */
+    height: 180px; /* Maintain aspect ratio */
+    border-radius: 15px;
+    border: 2px dotted #52b788; /* Green dotted border around image */
+    object-fit: cover;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.profile .name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.profile .university {
+    color: #007bff;
+    margin-top: 5px;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .profile {
+        flex-basis: 48%; /* On smaller screens, two profiles per row */
+    }
+}
+
+@media (max-width: 576px) {
+    .profile {
+        flex-basis: 100%; /* On very small screens, one profile per row */
+    }
+}
+
+/* Align the switch properly in the navbar */
+.switch-container {
+    padding-top: 8px; /* Adjust this value to match other items' vertical alignment */
+}
+
+.form-check-input {
+    margin-top: 0; /* Remove any extra default margin */
+    transform: scale(1.2); /* Make the switch slightly larger for better alignment */
+}
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Black background for the entire page */
+    padding-top: 75px;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 92vh; /* Full-screen height */
+    /* background-color: white; White background initially */
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.full-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease, height 0.5s ease;
+    transform-origin: bottom center;
+}
+
+/* Title */
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8); /* Shadow for title */
+    z-index: 2; /* Ensure title stays above the image */
+    
+}
+
+/* Breaking Barriers Section - Expanded Image Container */
+.breaking-barrier-expanded {
+    position: relative;
+    padding: 0; /* Remove padding */
+    margin: 0 25px; /* Remove margins */
+    width: 100%; /* Make the container full width */
+    height: 50vh; /* Adjust height to fill screen minus some space */
+    display: flex;
+    justify-content: space-between; /* Center the image within */
+    align-items: stretch; /* Stretch the image to fill vertically */
+    gap: 10px;
+}
+
+/* Ensure images inside touch the top, left, and right */
+.breaking-barrier-expanded img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Ensure image fills container while keeping aspect ratio */
+    border-radius: 0; /* No rounded corners */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any padding */
+    display: block; /* Ensure the image behaves as a block element */
+}
+.breaking-barrier-expanded p {
+    font-weight: 200; /* Make the font normal (not bold) */
+    font-size: 16px; /* You can adjust the size if needed */
+    color: white; /* Set a standard color */
+    text-align: center; /* Center the text below the image */
+    margin-top: 10px; /* Add some space above the text */
+}
+
+#learnMoreBtn {
+    font-size: 18px;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+#learnMoreBtn i {
+    transition: transform 0.3s;
+}
+
+#learnMoreBtn.collapsed i {
+    transform: rotate(0);
+}
+
+#learnMoreBtn i {
+    transform: rotate(180deg);
+    color: red;
+}
+/* Styling for the Learn More section */
+.learn-more-card {
+    background-color: #081c15; /* Dark green background */
+    border: 2px dotted #52b788; /* Green dotted border */
+    color: white; /* White text */
+}
+
+.learn-more-card p {
+    color: white; /* White text inside paragraphs */
+}
+
+

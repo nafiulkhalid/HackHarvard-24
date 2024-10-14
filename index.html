@@ -1,0 +1,222 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackEnzyme</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://3dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
+    
+        <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <b><a class="navbar-brand" href="#">HackEnzyme</a></b>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#input-data">Input</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#output-prediction">Output</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#what-we-do">What we do</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-to-use">How to use it</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">Team</a>
+                    </li>
+                    <!-- Dark Mode Toggle Switch -->
+                    <li class="nav-item d-flex align-items-center switch-container">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shrinking Image Section -->
+    <div class="image-container">
+        <img src="one.gif" alt="Shrinking Image" class="full-image" id="shrinkingImage">
+        <h1 id="heading" class="title">HackEnzyme</h1>
+    </div>
+
+    <div class="dashboard">
+
+
+        <!-- Breaking Barrier Section -->
+        <section class="info-section" id="breaking">
+            <h2 style="text-align: center;">Breaking Barriers - <strong class="redTxt">One Protein</strong> a Time</h2>
+            <hr>
+            
+            <div class="profile-container">
+                <div class="profile breaking-barrier-expanded">
+                    <img src="uno.GIF" alt="Preston Schmittou" class="profile-img">
+                    <p>Personalized Medicine</p>
+                </div>
+                
+                <div class="profile breaking-barrier-expanded">
+                    <img src="dos.gif" alt="Nafiul Khalid" class="profile-img">
+                    <p>Drug Discovery</p>
+                </div>
+                
+                <div class="profile breaking-barrier-expanded">
+                    <img src="tres.gif" alt="Abdul B Tonmoy" class="profile-img">
+                    <p>Gene Therapy</p>
+                </div>    
+            </div>
+
+            <!-- Learn More Section -->
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-success" data-bs-toggle="collapse" href="#learnMoreContent" aria-expanded="false" aria-controls="learnMoreContent" id="learnMoreBtn">
+                    <i class="bi bi-arrow-down-circle"></i> Learn More
+                </button>
+            </div>
+
+            <div class="collapse mt-4" id="learnMoreContent">
+                <div class="card card-body learn-more-card">
+                    <p>Our Enzyme Sequence Predictor uses machine learning to predict enzyme sequences based on structural inputs, with wide-ranging impacts:</p>
+                    <ol>
+                        <li><strong class="redTxt">Drug Discovery:</strong> Treatment Selection
+                            CYP2D6
+                            Many medications, including opioids and antidepressants, are metabolized by CYP2D6. Drug selection and dosage may be impacted by patients with specific CYP2D6 genetic variations who metabolize medications either too slowly (poor metabolizers) or too quickly (ultra-rapid metabolizers). Our model could treat this by providing customized enzyme adjustments or alternate treatment options, maximizing medication efficacy and reducing side effects.</li>
+                        <li><strong class="redTxt">Gene Therapy:</strong>  Immunogenicity Asparaginase is an enzyme used to treat lymphoblastic leukemia. It is most commonly used for its ability to break down asparagine, an important amino acid chain for the cancer cell. Although the enzyme is potent, its immunogenic properties makes it unsuitable  for longer-term treatment. This is because the enzyme flags patients’ immune systems, making it think that the enzyme is a threat, leading to further implications. Our model is able to create enzymes similar in attributes to Asparaginase, while leaving out keywords that would make it immunogenic. Citation: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10213690/"> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10213690/</a></li>
+                        <li><strong class="redTxt">Biotechnology:</strong> In biofuel production, food processing, and more, predicting enzyme variants helps industries optimize processes, enhancing efficiency under specific conditions.</li>
+                        <li><strong class="redTxt">Personalized Medicine:</strong>  Prolyl Endopeptidases Gluten’s resistance to digestion may cause complications; projects have proven enzyme solutions are able to improve both digestion and immune responses. Our model could develop similar enzyme solutions, predicted from the smiles chemical compound string, to aid in food allergy. Citations: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7996948/"> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7996948/</a></li>
+                    </ol>
+                    <p>This tool accelerates innovation in medicine, biotech, and industry, driving real-world advancements by connecting enzyme research to practical applications.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Input Section -->
+        
+        <section class="input-section">
+            <h2>Input Data</h2>
+            
+            <label for="structure">Enzyme Structure (SMILES Format):</label>
+            <input type="file" id="structure" name="structure" accept=".pdb" class="input-box">
+
+            <label for="keywords">Keywords (comma-separated):</label>
+            <input type="text" id="keywords" name="keywords" placeholder="e.g., catalysis, substrate, cofactor" class="input-box">
+
+            <label for="subtraits">SMILES Sequence:</label>
+            <textarea id="subtraits" name="subtraits" rows="4" placeholder="Enter subtraits here" class="input-box"></textarea>
+
+            <label for="product">Product:</label>
+            <textarea id="product" name="product" rows="4" placeholder="Enter Product details here" class="input-box"></textarea>
+
+            <button id="predict-btn" class="btn btn-success">Predict Sequence</button>
+        </section>
+
+        <!-- Output Section -->
+        <section class="output-section" id="output-prediction">
+            <h2>Prediction Output</h2>
+            <hr>
+
+            <!-- Image section -->
+            <div class="image-section">
+                <img src="one.png" alt="Enzyme Structure" class="output-image">
+            </div>
+
+        <!-- Figure Label (Typewriter effect) -->
+            <div id="figure-label" class="typewriter-container text-center">
+                <span id="typewriter-text"></span>
+            </div>
+    
+            <!-- Sequence Output -->
+            <div id="output-area">
+                <p>Predicted amino acid sequence will appear above...</p>
+                
+            </div>
+        </section>
+
+        <!-- What we do Section -->
+        <section id="what-we-do" class="section-container">
+                <div class="info-box">
+                <h2>What We Do</h2>
+                <hr>
+                <p>At <u>Enzyme Sequence Predictor</u>, we use advanced algorithms and machine learning models to <b class="redTxt">predict the sequence of amino acids</b> in enzymes based on various inputs such as <b class="greenTxt">enzyme structures, keywords, subtraits,</b> and more. Our tool is aimed at helping researchers and students better understand the structures of enzymes and their functions.</p>
+                </div>
+                <img src="two.gif" alt="3D Enzyme" class="info-image">
+        </section>
+            
+        <!-- How to use it Section -->
+        <section id="how-to-use" class="section-container">
+            <img src="three.gif" alt="3D Enzyme" class="info-image">
+            <div class="info-box">
+            <h2>How To Use It</h2>
+            <hr>
+            <p>Using our tool is simple:</p>
+            <ol>
+                <li><strong>Upload Enzyme Structure:</strong> Upload a PDB format file containing the structure of the enzyme.</li>
+                <li><strong>Add Keywords:</strong> Provide keywords that describe the function of the enzyme, such as <b class="redTxt">'catalysis', 'substrate',</b> or <b class="redTxt">'cofactor'</b>.</li>
+                <li><strong>Enter Subtraits:</strong> Specify any subtraits or additional information about the enzyme's behavior, such as <b class="redTxt">temperature sensitivity, binding affinities,</b> etc.</li>
+                <li><strong>Product Details:</strong> <b class="greenTxt">Optionally</b>, add information about the product or outcome of the enzyme’s function.</li>
+                <li><strong>Get Predicted Sequence:</strong> After hitting the "<b class="greenTxt">Predict Sequence</b>" button, you will receive the predicted sequence of amino acids for the enzyme. The output will also visualize the enzyme structure.</li>
+            </ol>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="info-section" id="about-us">
+            <h2>About Us</h2>
+            <hr>
+            
+            <div class="profile-container">
+                <div class="profile">
+                    <img src="preston.png" alt="Preston Schmittou" class="profile-img">
+                    <p><span class="name">Preston Schmittou</span></p>
+                    <p><span class="university">George Mason University</span></p>
+                    <p><button class="btn btn-outline-secondary btn-sm copy-btn" data-email="prestons@ieee.org">prestons@ieee.org</button></p>
+                </div>
+
+                <div class="profile">
+                    <img src="nafi.JPG" alt="Nafiul Khalid" class="profile-img">
+                    <p><span class="name">Nafiul Khalid</span></p>
+                    <p><span class="university">Florida International University</span></p>
+                    <p><button class="btn btn-outline-secondary btn-sm copy-btn" data-email="nkhal014@fiu.edu">nkhal014@fiu.edu</button></p>
+                </div>
+
+                <div class="profile">
+                    <img src="tonmoy.PNG" alt="Abdul B Tonmoy" class="profile-img">
+                    <p><span class="name">Abdul Basit Tonmoy</span></p>
+                    <p><span class="university">Wabash College</span></p>
+                    <p><button class="btn btn-outline-secondary btn-sm copy-btn" data-email="abdulbasittonmoy@gmail.com">abdulbasittonmoy@gmail.com</button></p>
+                </div>
+
+                <div class="profile">
+                    <img src="quan.png" alt="Quan Huynh" class="profile-img">
+                    <p><span class="name">Quan Huynh</span></p>
+                    <p><span class="university">George Mason University</span></p>
+                    <p><button class="btn btn-outline-secondary btn-sm copy-btn" data-email="quanhuynh@ieee.org">quanhuynh@ieee.org</button></p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 HackEnzyme. All rights reserved.</p>
+        <p>HackEnzyme by EnzeMatic</p>
+        <h4>HackHarvard - 2024</h4>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
