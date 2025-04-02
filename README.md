@@ -70,7 +70,7 @@ HackEnzyme is a bioinformatics tool designed to predict enzyme sequences using c
 
 ---
 
-A HackHarvard2025 Project
+A HackHarvard2024 Project
 
 ---
 * HackHarvard is the annual hackathon of Harvard University
