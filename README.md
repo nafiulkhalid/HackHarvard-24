@@ -1,6 +1,8 @@
+# HackEnzyme - Enzyme Sequence Predictor
+
 https://github.com/user-attachments/assets/17aa65aa-b3a2-41f3-808d-cfedd66ce82d
 
-# HackEnzyme - Enzyme Sequence Predictor
+---
 
 HackEnzyme is a bioinformatics tool designed to predict enzyme sequences using chemical structure inputs in SMILES format. The project provides researchers and students with a platform to explore and analyze enzyme structures, enabling the understanding of their functions. This repository contains the source code for the tool, which offers interactive input fields, outputs predicted sequences, and displays enzyme visualizations.
 
