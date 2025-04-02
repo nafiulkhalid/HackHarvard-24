@@ -68,3 +68,9 @@ HackEnzyme is a bioinformatics tool designed to predict enzyme sequences using c
 5. **Dark Mode**:
     - Toggle dark mode using the switch in the navigation bar for a more comfortable viewing experience in low-light settings.
 
+---
+
+A HackHarvard2025 Project
+
+---
+* HackHarvard is the annual hackathon of Harvard University
